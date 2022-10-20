@@ -1,5 +1,8 @@
 #include "helpers.h"
 
+// All multi-byte numbers are stored as big endian in the class files
+// so this is just here to easily read a number and convert it to little endian
+
 u4 read_u4(FILE* file) {
 	char buffer[4];
 	fread(buffer, 1, 4, file);

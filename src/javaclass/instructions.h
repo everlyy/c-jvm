@@ -2,13 +2,15 @@
 
 #include "types.h"
 
+// https://docs.oracle.com/javase/specs/jvms/se7/html/jvms-6.html
+
 typedef struct instruction_s instruction_t;
 
 struct instruction_s {
 	char mnemonic[32];
 	u1 argc;
-};
-
+}
+;
 static instruction_t instruction_table[256] = {
 	[0x00] = { "nop", 0 },
 	[0x03] = { "iconst_0", 0 },
