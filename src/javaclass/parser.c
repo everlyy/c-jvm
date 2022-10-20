@@ -1,6 +1,10 @@
 #include "parser.h"
 #include "helpers.h"
 
+// https://docs.oracle.com/javase/specs/jvms/se7/html/jvms-4.html
+// ^ this entire file isn't actually made to be spec-compliant or anything,
+//   it's just where I got all the info about the layout of the file and stuff
+
 void parse_class_file(class_file_t* class_file, FILE* file) {
 	class_file->magic = read_u4(file);
 	class_file->minor_version = read_u2(file);

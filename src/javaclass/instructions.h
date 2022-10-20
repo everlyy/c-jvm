@@ -2,6 +2,8 @@
 
 #include "types.h"
 
+// https://docs.oracle.com/javase/specs/jvms/se7/html/jvms-6.html
+
 typedef struct instruction_s instruction_t;
 
 struct instruction_s {
